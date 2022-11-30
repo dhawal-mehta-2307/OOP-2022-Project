@@ -1,12 +1,15 @@
 package flashCards;
 
-import java.time.*;
+import java.time.LocalDate;
 import java.util.UUID;
 
-public abstract class Card {
-    protected final UUID uniqueID;
-    protected Difficulty difficulty;
-    protected LocalDateTime lastSeen;
+public abstract class Card implements Comparable<Card>, Viewable {
+    // Generates a UUID
+    // Note: uniqueID is a possible redundant variable
+    protected final UUID cardID = UUID.randomUUID();
+    protected Difficulty difficulty = Difficulty.HARD;
+    protected LocalDate lastSeen = LocalDate.now();
+    protected LocalDate dueDate = LocalDate.now().plusDays(1);
     protected String front;
     protected String back;
 
@@ -14,17 +17,18 @@ public abstract class Card {
     /*
      * Getter functions
      */
-    public UUID getUniqueID() {
-        return uniqueID;
+    public UUID getCardID() {
+        return cardID;
     }
 
     public Difficulty getDifficulty() {
         return difficulty;
     }
 
-    public LocalDateTime getLastSeen() {
+    public LocalDate getLastSeen() {
         return lastSeen;
     }
+    public LocalDate getDueDate() { return dueDate; }
 
     /*
      * Setter functions
@@ -41,6 +45,12 @@ public abstract class Card {
         this.back = back;
     }
 
+    // Make sure the setDifficulty function is implemented before this gets executed...!!!
+    public void setLastSeenToToday() {
+        lastSeen = LocalDate.now();
+        dueDate = lastSeen.plusDays((long) Math.pow(2, quantifyDifficulty()));
+    }
+
     /* CONSTRUCTOR:
      * When a new card is created only the front and back will be supplied.
      * The UUID class deals with generating and formatting Universally Unique IDs.
@@ -50,8 +60,6 @@ public abstract class Card {
     public Card(String front, String back) {
         this.front = front;
         this.back = back;
-        uniqueID = UUID.randomUUID(); // Generates a UUID
-        difficulty = Difficulty.AGAIN;
     }
 
     /*
@@ -64,8 +72,18 @@ public abstract class Card {
         setDifficulty(newDifficulty);
     }
 
-    // While learning event occurs, return the question and then the answer
-    // In case of two-sided, use a randomizer to determine if the question should be front or back
-    public abstract String getQuestion();
-    public abstract String getAnswer();
+    public int compareTo(Card card) {
+        return -this.dueDate.compareTo(card.getDueDate());
+    }
+
+    protected int quantifyDifficulty() {
+        switch (this.difficulty) {
+            case EASY: return 0;
+            case MODERATE: return 1;
+            case HARD: return 2;
+            case AGAIN: return 3;
+            default: return -1;
+        }
+    }
+
 }

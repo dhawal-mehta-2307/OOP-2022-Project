@@ -8,7 +8,6 @@ public class TwoSided extends Card {
 
     public TwoSided(String front, String back) {
         super(front, back);
-        reverse = false;
     }
 
     @Override
@@ -24,7 +23,6 @@ public class TwoSided extends Card {
         else return back;
     }
 
-    // Sets reverse to TRUE or FALSE randomly
     private void cardRandomizer() {
         Random randomizer = new Random();
         int random = randomizer.nextInt(2); // Randomly chooses between 1 and 0
