@@ -7,14 +7,14 @@ public class Basic extends Card {
     }
 
     @Override
-    public String getQuestion() {
-        return front;
-    }
+    public String getQuestion() { return front; }
 
     @Override
-    public String getAnswer() {
-        return back;
+    public String getAnswer() { return back; }
+
+    public static class InsufficientUnderscoresException extends Exception {
+        public InsufficientUnderscoresException(String msg) {
+            super(msg);
+        }
     }
-
-
 }
