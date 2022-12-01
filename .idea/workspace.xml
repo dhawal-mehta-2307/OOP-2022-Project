@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce5d8133-f027-4279-9f85-32af9e5561d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/client/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/client/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/client/EmptyDeckNameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/client/IncorrectCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/client/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/client/UserNameAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/CardAlreadyAddedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Deck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/InsufficientUnderscoresException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/MoreThanOneBlankException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/NoCardsToReviewException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Sharable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Viewable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OOP-2022-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Basic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/FillInTheBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/FillInTheBlank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/TwoSided.java" beforeDir="false" afterPath="$PROJECT_DIR$/FlashCardApplication/src/flashCards/TwoSided.java" afterDir="false" />
-    </list>
+    <list default="true" id="ce5d8133-f027-4279-9f85-32af9e5561d2" name="Changes" comment="Card, Deck and Sockets&#10;Implemented Card, Deck and related classes. Started working on login stuff using Sockets class." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,19 +31,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="OOP-2022-Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="OOP-2022-Project" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,8 +67,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669827866272</updated>
-      <workItem from="1669827867654" duration="504000" />
+      <workItem from="1669827867654" duration="1191000" />
     </task>
+    <task id="LOCAL-00001" summary="Card, Deck and Sockets&#10;Implemented Card, Deck and related classes. Started working on login stuff using Sockets class.">
+      <created>1669828462918</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669828462918</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,5 +95,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Card, Deck and Sockets&#10;Implemented Card, Deck and related classes. Started working on login stuff using Sockets class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Card, Deck and Sockets&#10;Implemented Card, Deck and related classes. Started working on login stuff using Sockets class." />
   </component>
 </project>
